@@ -34,42 +34,44 @@ namespace final
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.reports = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.Button();
             this.dashboard = new System.Windows.Forms.Button();
             this.bill = new System.Windows.Forms.Button();
             this.stock = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.reports = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 5);
             this.panel1.Name = "panel1";
@@ -81,7 +83,7 @@ namespace final
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Location = new System.Drawing.Point(224, 15);
+            this.label1.Location = new System.Drawing.Point(205, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 35);
             this.label1.TabIndex = 15;
@@ -90,6 +92,7 @@ namespace final
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel2.Controls.Add(this.pictureBox10);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -98,12 +101,13 @@ namespace final
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 655);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(23, 137);
+            this.textBox2.Location = new System.Drawing.Point(3, 150);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(129, 13);
             this.textBox2.TabIndex = 12;
@@ -127,6 +131,19 @@ namespace final
             this.panel3.Size = new System.Drawing.Size(200, 418);
             this.panel3.TabIndex = 1;
             this.panel3.Enter += new System.EventHandler(this.metroButton5_Click);
+            // 
+            // reports
+            // 
+            this.reports.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reports.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.reports.ForeColor = System.Drawing.Color.White;
+            this.reports.Location = new System.Drawing.Point(2, 195);
+            this.reports.Name = "reports";
+            this.reports.Size = new System.Drawing.Size(197, 42);
+            this.reports.TabIndex = 15;
+            this.reports.Text = "Reports";
+            this.reports.UseVisualStyleBackColor = false;
             // 
             // search
             // 
@@ -169,7 +186,7 @@ namespace final
             this.bill.Name = "bill";
             this.bill.Size = new System.Drawing.Size(197, 42);
             this.bill.TabIndex = 9;
-            this.bill.Text = "Create bill";
+            this.bill.Text = "Create Bill";
             this.bill.UseVisualStyleBackColor = false;
             this.bill.MouseLeave += new System.EventHandler(this.color_changer2);
             this.bill.MouseHover += new System.EventHandler(this.color_changer);
@@ -211,45 +228,23 @@ namespace final
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(12, 130);
+            this.textBox1.Location = new System.Drawing.Point(3, 150);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 30);
+            this.textBox1.Size = new System.Drawing.Size(194, 27);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // reports
+            // pictureBox10
             // 
-            this.reports.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reports.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.reports.ForeColor = System.Drawing.Color.White;
-            this.reports.Location = new System.Drawing.Point(2, 195);
-            this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(197, 42);
-            this.reports.TabIndex = 15;
-            this.reports.Text = "Reports";
-            this.reports.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::final.Properties.Resources.minimize;
-            this.pictureBox3.Location = new System.Drawing.Point(1230, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 19);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::final.Properties.Resources.close2;
-            this.pictureBox2.Location = new System.Drawing.Point(1250, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 19);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Image = global::final.Properties.Resources.icon;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(199, 135);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
             // 
             // pictureBox9
             // 
@@ -257,6 +252,7 @@ namespace final
             this.pictureBox9.Location = new System.Drawing.Point(3, 195);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 16;
             this.pictureBox9.TabStop = false;
             // 
@@ -266,6 +262,7 @@ namespace final
             this.pictureBox8.Location = new System.Drawing.Point(3, 243);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(48, 42);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             // 
@@ -275,6 +272,7 @@ namespace final
             this.pictureBox7.Location = new System.Drawing.Point(3, 147);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 14;
             this.pictureBox7.TabStop = false;
             // 
@@ -284,6 +282,7 @@ namespace final
             this.pictureBox6.Location = new System.Drawing.Point(3, 99);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
@@ -293,17 +292,9 @@ namespace final
             this.pictureBox5.Location = new System.Drawing.Point(3, 51);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::final.Properties.Resources.Capture1;
-            this.pictureBox1.Location = new System.Drawing.Point(158, 130);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 27);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -312,14 +303,44 @@ namespace final
             this.pictureBox4.Location = new System.Drawing.Point(3, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(45, 39);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::final.Properties.Resources.Capture;
+            this.pictureBox1.Location = new System.Drawing.Point(169, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 27);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::final.Properties.Resources.minimize;
+            this.pictureBox11.Location = new System.Drawing.Point(1258, 0);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 16;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::final.Properties.Resources.close2;
+            this.pictureBox2.Location = new System.Drawing.Point(1292, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // exp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1320, 655);
+            this.ClientSize = new System.Drawing.Size(1320, 650);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "exp";
@@ -331,15 +352,16 @@ namespace final
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,8 +379,6 @@ namespace final
         private System.Windows.Forms.Button stock;
         private System.Windows.Forms.Button logout;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -367,6 +387,9 @@ namespace final
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button reports;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox2;
 
 
 
